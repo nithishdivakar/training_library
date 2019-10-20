@@ -1,0 +1,34 @@
+{
+  "name": "RRDB_ESRGAN_x4", 
+  "suffix": "_ESRGAN", 
+  "model": "srragan", 
+  "scale": 4, 
+  "gpu_ids": [], 
+  "datasets": {
+    "test_1": { // the 2nd test dataset
+      "name": "Set5", 
+      "mode": "LRHR", 
+      "dataroot_HR": "/Users/nithish.divakar/WORK/super_resolution/SR_testing_datasets/Set5/"
+    },
+    "test_2": { // the 2nd test dataset
+      "name": "Set14", 
+      "mode": "LRHR", 
+      "dataroot_HR": "/Users/nithish.divakar/WORK/super_resolution/SR_testing_datasets/Set14/"
+    }
+  }, 
+  "path": {
+    "results_root": "/Users/nithish.divakar/WORK/super_resolution/Outputs/RRDB_ESRGAN_x4/", 
+    "pretrain_model_G": "/Users/nithish.divakar/WORK/super_resolution/compare_models/model_files/RRDB_ESRGAN_x4.pth"
+  }, 
+  "network_G": {
+    "which_model_G": "RRDB_net", // RRDB_net | sr_resnet,
+    "norm_type": null,
+    "mode": "CNA",
+    "nf": 64,
+    "nb": 23,
+    "in_nc": 3,
+    "out_nc": 3, 
+    "gc": 32, 
+    "group": 1
+  }
+}
